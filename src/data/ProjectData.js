@@ -1,6 +1,15 @@
 // --------------------------------------- Project List
 export const ProjectList = [
    {
+    img: "/genova.png",
+    title: "Genova-AI",
+    description:
+      "",
+    tech_stack: ["Next.js" , "Python","Tailwind CSS", "FastApi", "javascript", "Pollinations.ai", "MongoDb"],
+    github_url: "https://github.com/shahbaz123ahmed",
+    demo_url: "https://genova-frontend-weld.vercel.app/",
+  }, 
+  {
     img: "/bond1.png",
     title: "Bond-Metal",
     description:

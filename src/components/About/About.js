@@ -17,8 +17,14 @@ function About() {
         <div className="BigCard">
           <ScrollAnimation animateIn="fadeInLeft">
             <Image
-              src="/assets/images/coverpic.png"
-              alt="man-svgrepo"
+              src={(process.env.PUBLIC_URL || "") + "/assets/images/coverpic.png"}
+              onError={(e) => {
+                if (!e.target.dataset.fallbackTried) {
+                  e.target.dataset.fallbackTried = "1";
+                  e.target.src = (process.env.PUBLIC_URL || "") + "/coverpic.png";
+                }
+              }}
+              alt="Shahbaz Ahmed"
             />
           </ScrollAnimation>
           <div className="AboutBio">

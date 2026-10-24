@@ -45,7 +45,7 @@ const Certificates = () => {
   ];
 
   return (
-    <CertificateWrapper>
+    <CertificateWrapper id="certificates">
       <CertificateHeading>My Certificates</CertificateHeading>
       {certificateData.map((certificate, index) => (
         <CertificateItem key={index} index={index}>

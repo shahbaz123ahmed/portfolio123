@@ -1,29 +1,83 @@
 // --------------------------------------- Project List
 export const ProjectList = [
-   {
+  {
+    img: "/lumen-library.png",
+    title: "Lumen Library",
+    description:
+      "Modern Library Management System with Google OAuth, catalog tracking, and role-based access.",
+    tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "Google OAuth", "Vercel"],
+    github_url: "https://github.com/shahbaz123ahmed",
+    demo_url: "https://library-management-system-ten-phi.vercel.app/",
+  },
+  {
+    img: "/chachiji.png",
+    title: "Chachiji",
+    description:
+      "Authentic Handcrafted Achar & Mithila Makhana online store with product filtering and dynamic cart.",
+    tech_stack: ["Next.js", "React", "Tailwind CSS", "Cloudinary", "Vercel"],
+    github_url: "https://github.com/shahbaz123ahmed",
+    demo_url: "https://chachiji.vercel.app/",
+  },
+  {
+    img: "/lovosis.png",
+    title: "LOVOSIS",
+    description:
+      "Enterprise security distributor platform for network cameras, CCTV surveillance, and access control.",
+    tech_stack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
+    github_url: "https://github.com/shahbaz123ahmed",
+    demo_url: "https://lovosis.bh/",
+  },
+  {
+    img: "/easy-converter.png",
+    title: "Easy Converter",
+    description:
+      "Fast, secure online file conversion suite supporting 50+ image, PDF, and document formats.",
+    tech_stack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
+    github_url: "https://github.com/shahbaz123ahmed",
+    demo_url: "https://easy-converter-tool.vercel.app/",
+  },
+  {
+    img: "/primotech.png",
+    title: "PrimoTech",
+    description:
+      "Enterprise CCTV & security surveillance distributor platform for Uniarch IP cameras, NVRs, and smart kits.",
+    tech_stack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
+    github_url: "https://github.com/shahbaz123ahmed",
+    demo_url: "https://primotech-llc.com/",
+  },
+  {
+    img: "/imou.png",
+    title: "Imou",
+    description:
+      "Intelligent smart security platform featuring AI-powered surveillance cameras, smart doorbells, and IoT automation.",
+    tech_stack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
+    github_url: "https://github.com/shahbaz123ahmed",
+    demo_url: "https://imou-frontend.vercel.app/",
+  },
+  {
     img: "/genova.png",
     title: "Genova-AI",
     description:
-      "",
-    tech_stack: ["Next.js" , "Python","Tailwind CSS", "FastApi", "javascript", "Pollinations.ai", "MongoDb"],
+      "AI-powered creative visual platform for lightning-fast image generation and interactive design.",
+    tech_stack: ["Next.js", "Python", "Tailwind CSS", "FastApi", "JavaScript", "Pollinations.ai", "MongoDB"],
     github_url: "https://github.com/shahbaz123ahmed",
     demo_url: "https://genova-frontend-weld.vercel.app/",
-  }, 
+  },
   {
     img: "/bond1.png",
     title: "Bond-Metal",
     description:
-      "",
-    tech_stack: ["react+vite" , "tailwindcss", "HTML", "javascrip", "CSS", "Figma"],
+      "Modern architectural metal fabrication and manufacturing web experience built with React & Tailwind.",
+    tech_stack: ["React+Vite", "Tailwind CSS", "HTML5", "JavaScript", "CSS3", "Figma"],
     github_url: "https://github.com/shahbaz123ahmed/Bond-metal-New",
-    demo_url: "https://bond-metal-new-p59s.vercel.app/",
+    demo_url: "https://bondmetal-new.vercel.app/",
   },
   {
     img: "/gene1.png",
     title: "To-Do App",
     description:
-      "A To-Do app is a software application designed to help users manage tasks or items they need to accomplishy.",
-    tech_stack: ["react+vite" , "tailwindcss", "HTML", "CSS", "Figma"],
+      "Intuitive task management application designed to organize, prioritize, and track daily workflow.",
+    tech_stack: ["React+Vite", "Tailwind CSS", "HTML5", "CSS3", "Figma"],
     github_url: "https://github.com/shahbaz123ahmed/to-do",
     demo_url: "https://todoapp0010.netlify.app/",
   },
@@ -31,8 +85,8 @@ export const ProjectList = [
     img: "/weather.png",
     title: "WEATHER App",
     description:
-      "A Weather App is a software application designed to provide real-time information about the weather conditions in a specific location. It typically retrieves data from weather APIs or meteorological services and displays information",
-    tech_stack: ["HTML", "CSS", "JAVASCRIPT", "API", "NETIFY", "FIGMA"],
+      "Real-time interactive weather forecasting web app with live meteorological data and clean UI.",
+    tech_stack: ["HTML5", "CSS3", "JavaScript", "Weather API", "Netlify", "Figma"],
     github_url: "https://github.com/shahbaz123ahmed/weather-app",
     demo_url: "https://incandescent-lily-dd46a9.netlify.app/",
   },
@@ -40,8 +94,8 @@ export const ProjectList = [
     img: "/bolb.png",
     title: "BLOB-GENERATOR",
     description:
-      "A blob generator for CSS allows you to create random, organic shapes that you can use in your website designs, typically exported as CSS or SVG code.",
-    tech_stack: ["REACT+VITE", "HTML", "TAILWINDCSS", "JAVASCRIPT", "FIGMA", "NETIFY"],
+      "Dynamic CSS & SVG organic shape generator for modern UI/UX design experimentation.",
+    tech_stack: ["React+Vite", "Tailwind CSS", "JavaScript", "SVG Export", "Netlify"],
     github_url: "https://github.com/shahbaz123ahmed/Blob_Generator",
     demo_url: "https://blobgeneratorapp.netlify.app/",
   },
@@ -49,8 +103,8 @@ export const ProjectList = [
     img: "/ecom.png",
     title: "E-COMMERCE",
     description:
-      "A simple ecommerce web application created with React, Vite.js, and Tailwind CSS, utilizing data from the FakeStoreAPI...",
-    tech_stack: ["REACTJS", "VITE", "TAILWINDCSS", "HTML", "API", "FIGMA", "NETIFY", "TSX"],
+      "Full-featured online shopping experience with product search, filtering, and responsive cart.",
+    tech_stack: ["ReactJS", "Vite", "Tailwind CSS", "Store API", "TypeScript", "Netlify"],
     github_url: "https://github.com/shahbaz123ahmed/E_commerce",
     demo_url: "https://beamish-bubblegum-422734.netlify.app/",
   },
@@ -58,8 +112,8 @@ export const ProjectList = [
     img: "/gene.png",
     title: "BLOG-GENERATOR",
     description:
-      "A Blog Generator App is a web-based application that allows users to create, manage, and publish blog posts with ease...",
-    tech_stack: ["VITE", "TYPESCRIPT", "TAILWINDCSS", "REDUX", "REACT-HOOK-FORM"],
+      "Modern blogging and content platform with Markdown support, Redux state, and dynamic routing.",
+    tech_stack: ["Vite", "TypeScript", "Tailwind CSS", "Redux", "React Hook Form"],
     github_url: "https://github.com/shahbaz123ahmed/Blog_generator",
     demo_url: "https://blog-generator-lake.vercel.app/",
   },
@@ -145,7 +199,7 @@ export const stackList = [
     name: "Figma",
   },
   {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
     name: "TailwindCSS",
   },
   {

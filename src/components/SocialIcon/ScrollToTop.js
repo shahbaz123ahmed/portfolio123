@@ -13,32 +13,21 @@ const fadeIn = keyframes`
   }
 `;
 
-const pulse = keyframes`
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(57, 134, 250, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 15px rgba(57, 134, 250, 0);
-  }
-`;
-
 const ScrollButton = styled.div`
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 70px;
-  height: 70px;
+  width: 58px;
+  height: 58px;
   cursor: pointer;
   z-index: 1000;
   animation: ${fadeIn} 0.3s ease-in-out;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
   &:hover {
-    transform: scale(1.15);
-    animation: ${pulse} 1.5s infinite;
+    transform: translateY(-4px) scale(1.08);
   }
 
-  /* Show tooltip on hover */
   &:hover .tooltip {
     opacity: 1;
   }
@@ -48,8 +37,8 @@ const ScrollButton = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     bottom: 20px;
     right: 20px;
   }
@@ -59,41 +48,38 @@ const CircleProgress = styled.svg`
   width: 100%;
   height: 100%;
   transform: rotate(-90deg);
-  filter: drop-shadow(0 6px 15px rgba(57, 134, 250, 0.4));
+  filter: drop-shadow(0 8px 20px rgba(70, 116, 233, 0.22));
 `;
 
 const CircleBackground = styled.circle`
-  fill: rgba(255, 255, 255, 0.95);
-  stroke: rgba(57, 134, 250, 0.3);
-  stroke-width: 4;
+  fill: #ffffff;
+  stroke: rgba(174, 191, 223, 0.35);
+  stroke-width: 3.5;
 `;
 
 const CircleProgressBar = styled.circle`
   fill: none;
-  stroke: url(#gradient);
-  stroke-width: 4;
+  stroke: url(#scroll-gradient);
+  stroke-width: 3.5;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: stroke-dashoffset 0.3s ease;
+  transition: stroke-dashoffset 0.2s ease;
 `;
 
 const PercentageText = styled.div`
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 16px;
-  font-weight: 800;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #4674e9;
+  letter-spacing: -0.3px;
   text-align: center;
   line-height: 1;
-  
+
   @media (max-width: 768px) {
-    font-size: 14px;
+    font-size: 11px;
   }
 `;
 
@@ -102,39 +88,40 @@ const UpArrowIcon = styled.div`
   bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 10px;
-  color: #667eea;
+  font-size: 9px;
+  color: #7a94df;
   font-weight: 700;
-  
+
   @media (max-width: 768px) {
-    font-size: 9px;
+    font-size: 8px;
     bottom: 6px;
   }
 `;
 
 const Tooltip = styled.div`
   position: absolute;
-  bottom: 85px;
+  bottom: 72px;
   right: 0;
-  background: rgba(0, 0, 0, 0.85);
-  color: white;
-  padding: 8px 12px;
+  background: #080e2b;
+  color: #ffffff;
+  padding: 6px 12px;
   border-radius: 8px;
   font-size: 12px;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
-  
+  transition: opacity 0.25s ease;
+  box-shadow: 0 4px 12px rgba(8, 14, 43, 0.15);
+
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 100%;
     right: 20px;
-    border: 6px solid transparent;
-    border-top-color: rgba(0, 0, 0, 0.85);
+    border: 5px solid transparent;
+    border-top-color: #080e2b;
   }
-  
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -147,27 +134,29 @@ const ScrollToTop = () => {
   useEffect(() => {
     const toggleVisibility = () => {
       const scrollTop = window.pageYOffset;
-      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
+      const docHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 
       setScrollProgress(scrollPercent);
-      setIsVisible(scrollTop > 300);
+      setIsVisible(scrollTop > 250);
     };
 
     window.addEventListener("scroll", toggleVisibility);
-    toggleVisibility(); // Initial check
-    
+    toggleVisibility();
+
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
-  const radius = 28;
+  const radius = 24;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (scrollProgress / 100) * circumference;
 
@@ -175,31 +164,30 @@ const ScrollToTop = () => {
     <>
       {isVisible && (
         <ScrollButton onClick={scrollToTop}>
-          <Tooltip className="tooltip">Click to scroll to top</Tooltip>
-          <CircleProgress viewBox="0 0 70 70">
+          <Tooltip className="tooltip">Scroll to top</Tooltip>
+          <CircleProgress viewBox="0 0 60 60">
             <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#667eea" />
-                <stop offset="50%" stopColor="#764ba2" />
-                <stop offset="100%" stopColor="#f093fb" />
+              <linearGradient
+                id="scroll-gradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stopColor="#7d9efa" />
+                <stop offset="100%" stopColor="#4674e9" />
               </linearGradient>
             </defs>
-            <CircleBackground
-              cx="35"
-              cy="35"
-              r={radius}
-            />
+            <CircleBackground cx="30" cy="30" r={radius} />
             <CircleProgressBar
-              cx="35"
-              cy="35"
+              cx="30"
+              cy="30"
               r={radius}
               strokeDasharray={circumference}
               strokeDashoffset={offset}
             />
           </CircleProgress>
-          <PercentageText>
-            {Math.round(scrollProgress)}%
-          </PercentageText>
+          <PercentageText>{Math.round(scrollProgress)}%</PercentageText>
           <UpArrowIcon>▲</UpArrowIcon>
         </ScrollButton>
       )}

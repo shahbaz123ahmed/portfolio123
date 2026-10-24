@@ -21,7 +21,7 @@ const Header = ({ toggle }) => {
         <NavBtn>
           <a
             className="btn PrimaryBtn"
-            href="https://my-updated-resume.tiiny.site/"
+            href="/Shahbaz_Ahmed_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

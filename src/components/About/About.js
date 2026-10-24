@@ -15,21 +15,21 @@ function About() {
       <div className="Container">
         <div className="SectionTitle">About Me</div>
         <div className="BigCard">
-        <ScrollAnimation animateIn="fadeInLeft">
-          <Image
-            src="/assets/images/shah.svg"
-            alt="man-svgrepo"
-          />
-        </ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInLeft">
+            <Image
+              src="/assets/images/coverpic.png"
+              alt="man-svgrepo"
+            />
+          </ScrollAnimation>
           <div className="AboutBio">
             <ScrollAnimation animateIn="fadeInLeft">
-            Hello! My name is <strong>Shahbaz Ahmed</strong>. I'm passionate about front-end development and love creating responsive, pixel-perfect websites.
+              Hello! My name is <strong>Shahbaz Ahmed</strong>. a Full Stack Developer passionate about building modern, responsive, and user-friendly web applications.
             </ScrollAnimation>
 
             <br /><br />
-            
+
             <ScrollAnimation animateIn="fadeInLeft">
-            I have experience working with modern technologies and frameworks, continuously learning and improving my skills to deliver high-quality web solutions.
+              I enjoy turning ideas into practical digital solutions using modern technologies, writing clean and maintainable code, and continuously improving my skills to build reliable, high-quality web experiences.
             </ScrollAnimation>
 
             <br /><br />
@@ -39,7 +39,7 @@ function About() {
                 I have become confident using the following technologies:
               </div>
             </ScrollAnimation>
-            
+
 
             <Technologies>
               {stackList.map((stack, index) => (
@@ -50,7 +50,7 @@ function About() {
                   </Tech>
                 </ScrollAnimation>
               ))}
-              
+
               {/* New Technology Icons */}
               <ScrollAnimation animateIn="fadeInLeft">
                 <Tech className="tech">

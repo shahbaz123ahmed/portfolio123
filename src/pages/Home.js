@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../components/Hero/Hero";
+import OrbitDeliveryHero from "../components/ui/orbit-delivery-hero";
 import Projects from "../components/Projects/Projects";
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
@@ -11,7 +11,7 @@ import Certificates from "../components/Certificate/certificate";
 function Home() {
   return (
     <>
-      <Hero />
+      <OrbitDeliveryHero />
       <Certificates />
       <Projects />
       <About />

@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/react";
 
-// Fade in animation
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -13,56 +12,49 @@ const fadeIn = keyframes`
   }
 `;
 
-// Shimmer effect
-const shimmer = keyframes`
-  0% {
-    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.3);
-  }
-  50% {
-    box-shadow: 0 8px 16px rgba(0, 0, 255, 0.6);
-  }
-  100% {
-    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.3);
-  }
-`;
-
 export const CertificateWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  margin: 2rem auto;
-  padding: 2rem;
-  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  max-width: 1300px;
 
   @media (max-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+  @media (max-width: 860px) {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    padding: 0 1.5rem;
   }
 
-  @media (max-width: 480px) {
-    grid-template-columns: 1fr; /* 1 column on small mobile */
-    gap: 1rem;
+  @media (max-width: 520px) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 0 1rem;
   }
 `;
 
 export const CertificateHeading = styled.h2`
-  grid-column: 1 / -1; /* Span across all columns */
+  grid-column: 1 / -1;
   text-align: center;
   font-weight: 700;
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: clamp(30px, 3.5vw, 42px);
+  color: #080e2b;
+  margin-bottom: 2rem;
+  letter-spacing: -0.03em;
+  position: relative;
 
-  @media (max-width: 768px) {
-    font-size: 2rem;
+  &::after {
+    content: "";
+    display: block;
+    width: 44px;
+    height: 3px;
+    background: #4674e9;
+    border-radius: 3px;
+    margin: 12px auto 0;
   }
 `;
 
@@ -70,70 +62,65 @@ export const CertificateItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid #e0e0e0;
-  border-radius: 16px;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  box-shadow: 0 4px 8px rgba(0, 0, 255, 0.3);
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: 1px solid rgba(174, 191, 223, 0.4);
+  border-radius: 22px;
+  padding: 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(70, 116, 233, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   animation: ${fadeIn} 0.6s ease-in-out;
-  animation-delay: ${props => props.index * 0.1}s;
+  animation-delay: ${(props) => props.index * 0.08}s;
   animation-fill-mode: both;
   cursor: pointer;
-  height: 100%; /* Equal height for all cards */
-  min-height: 400px; /* Minimum height */
+  height: 100%;
+  min-height: 340px;
 
   &:hover {
-    transform: translateY(-15px) scale(1.05);
-    box-shadow: 0 12px 24px rgba(255, 99, 71, 0.8);
-    border-color: #ff6347;
-    animation: ${shimmer} 1.5s infinite;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(70, 116, 233, 0.14);
+    border-color: #4773ec;
   }
 
-  /* Hover effect for image inside */
   &:hover img {
-    transform: scale(1.1);
-    filter: brightness(1.1);
+    transform: scale(1.05);
   }
 
-  /* Hover effect for title inside */
   &:hover h3 {
-    color: #ff6347;
-    transform: scale(1.05);
+    color: #4773ec;
   }
 `;
 
 export const CertificateImageWrapper = styled.div`
   width: 100%;
-  height: 200px; /* Fixed height for all images */
+  height: 190px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 12px;
-  background: #f0f0f0;
+  border-radius: 14px;
+  background: #f4f8fe;
+  border: 1px solid rgba(174, 191, 223, 0.25);
   margin-bottom: 1rem;
 `;
 
 export const CertificateImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image covers the area without distortion */
-  border-radius: 12px;
-  transition: all 0.4s ease;
+  object-fit: contain;
+  padding: 8px;
+  transition: all 0.35s ease;
 `;
 
 export const CertificateTitle = styled.h3`
-  margin-top: auto; /* Push to bottom */
+  margin-top: auto;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #2c3e50;
-  line-height: 1.4;
-  min-height: 60px; /* Fixed height for titles */
+  color: #080e2b;
+  line-height: 1.45;
+  min-height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 `;
-

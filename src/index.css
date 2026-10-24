@@ -1,4 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --theme-bg: #f6f9ff;
+  --theme-ink: #080e2b;
+  --theme-muted: #4d5a83;
+  --theme-subtle: #7a87aa;
+  --theme-accent: #4674e9;
+  --theme-accent-hover: #345fda;
+  --theme-accent-light: #eef3ff;
+  --theme-card-bg: #ffffff;
+  --theme-card-border: rgba(174, 191, 223, 0.4);
+  --theme-card-shadow: 0 14px 40px rgba(70, 116, 233, 0.06);
+}
+
 *,
 *::before,
 *::after {
@@ -7,20 +25,19 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fafaff;
+  background: var(--theme-bg);
+  color: var(--theme-ink);
   font-weight: 400;
   overflow-x: hidden;
 }
 
 main {
-  background: #151418;
-  background-image: url('../public/blob-haikei.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: transparent;
   width: 100%;
 }
 
@@ -28,8 +45,7 @@ a {
   text-decoration: none;
   color: inherit;
   background-color: transparent;
-  transition: 0.2s ease-in;
-
+  transition: all 0.2s ease-in-out;
 }
 
 ul,
@@ -59,6 +75,7 @@ h5,
 h6 {
   font-size: 100%;
   font-weight: normal;
+  color: var(--theme-ink);
 }
 
 img,
@@ -67,103 +84,138 @@ video {
   max-width: 100%;
 }
 
+/* ------------------------------------ Buttons */
 .btn {
-  border-radius: 8px;
+  border-radius: 24px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-weight: 400;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: 500;
+  font-size: 15px;
   outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.btn-shadow{
-  box-shadow: 0px 2px 5px rgba(160, 170, 180, 0.6);
-
+.btn-shadow {
+  box-shadow: 0 8px 20px rgba(70, 116, 233, 0.18);
 }
 
-.btn-shadow:hover{
-  box-shadow: 0px 3px 8px rgba(160, 170, 180, 0.9);
+.btn-shadow:hover {
+  box-shadow: 0 12px 28px rgba(70, 116, 233, 0.28);
 }
 
 .PrimaryBtn {
-  padding: 12px 20px;
+  padding: 13px 26px;
   border: none;
-  background: rgb(57, 134, 250);
-  color: #f6f6f6;
-}
-
-.SecondaryBtn{
-  padding: 10px 18px;
-  border: 2px solid rgb(57, 134, 250);
-  color: #010606;
-  margin-right: 1rem;
+  background: var(--theme-accent);
+  color: #ffffff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 8px 20px rgba(70, 116, 233, 0.18);
 }
 
 .PrimaryBtn:hover {
-  background: rgb(18, 111, 250);
+  background: var(--theme-accent-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.SecondaryBtn {
+  padding: 11px 24px;
+  border: 1.5px solid rgba(174, 191, 223, 0.5);
+  background: #ffffff;
+  color: var(--theme-ink);
+  margin-right: 1rem;
+  border-radius: 24px;
 }
 
 .SecondaryBtn:hover {
-  background: #e7f1fa;
-  color: #000
+  background: var(--theme-accent-light);
+  border-color: var(--theme-accent);
+  color: var(--theme-accent);
+  transform: translateY(-2px);
 }
 
+/* ------------------------------------ Containers & Cards */
 .Container {
-  max-width: 1000px;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  max-width: 1100px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   width: 90%;
   margin-right: auto;
   margin-left: auto;
 }
 
 .BigCard {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  border-radius: 1rem;
+  padding: 3.5rem 2.5rem;
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
-  background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  background: #ffffff;
+  border: 1px solid var(--theme-card-border);
+  box-shadow: var(--theme-card-shadow);
+  transition: all 0.3s ease;
 }
 
-.AboutBio{
-  text-align: justify;
-  max-width: 750px;
+.BigCard:hover {
+  box-shadow: 0 20px 50px rgba(70, 116, 233, 0.1);
+}
+
+.AboutBio {
+  text-align: center;
+  max-width: 780px;
   margin: 0 auto;
-  color: #151418;
-  line-height: 1.6;
+  color: var(--theme-muted);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.AboutBio strong {
+  color: var(--theme-ink);
+  font-weight: 600;
 }
 
 .tagline2 {
-  text-align: left;
-  max-width: 650px;
-  margin: 0;
-  color: #151418;
+  text-align: center;
+  max-width: 700px;
+  margin: 2rem auto 2.5rem;
+  color: var(--theme-ink);
   line-height: 1.6;
-}
-
-.tagline2 {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 1.15rem;
 }
 
 .SectionTitle {
-  font-size: 28px;
-  color: #151418;
+  font-size: clamp(30px, 3.5vw, 42px);
+  color: var(--theme-ink);
   font-weight: 700;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
+  letter-spacing: -0.03em;
+  text-align: center;
+  position: relative;
 }
+
+.SectionTitle::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  background: var(--theme-accent);
+  border-radius: 3px;
+  margin: 12px auto 0;
+}
+
 .ProjectWrapper {
-  margin-top: -1rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 
-
-
-/* ------------------------------------ Media for Container */
 @media (max-width: 1000px) {
   .Container {
-    padding: 0;
+    width: 95%;
+    padding: 0 1rem;
+  }
+  .BigCard {
+    padding: 2.5rem 1.5rem;
   }
 }

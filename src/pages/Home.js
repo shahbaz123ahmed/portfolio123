@@ -1,6 +1,6 @@
 import React from "react";
 import OrbitDeliveryHero from "../components/ui/orbit-delivery-hero";
-import Projects from "../components/Projects/Projects";
+import Projects from "../components/Projects/Projects"; // Globe Project Showcase
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";

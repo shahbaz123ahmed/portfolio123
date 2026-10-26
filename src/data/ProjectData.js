@@ -3,6 +3,7 @@ export const ProjectList = [
   {
     img: "/lumen-library.png",
     title: "Lumen Library",
+    category: "Library Management Platform",
     description:
       "Modern Library Management System with Google OAuth, catalog tracking, and role-based access.",
     tech_stack: ["Next.js", "TypeScript", "Tailwind CSS", "Google OAuth", "Vercel"],
@@ -12,6 +13,7 @@ export const ProjectList = [
   {
     img: "/chachiji.png",
     title: "Chachiji",
+    category: "E-Commerce & Food D2C",
     description:
       "Authentic Handcrafted Achar & Mithila Makhana online store with product filtering and dynamic cart.",
     tech_stack: ["Next.js", "React", "Tailwind CSS", "Cloudinary", "Vercel"],
@@ -21,6 +23,7 @@ export const ProjectList = [
   {
     img: "/lovosis.png",
     title: "LOVOSIS",
+    category: "Enterprise Security & CCTV",
     description:
       "Enterprise security distributor platform for network cameras, CCTV surveillance, and access control.",
     tech_stack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
@@ -30,6 +33,7 @@ export const ProjectList = [
   {
     img: "/easy-converter.png",
     title: "Easy Converter",
+    category: "File Utility Suite",
     description:
       "Fast, secure online file conversion suite supporting 50+ image, PDF, and document formats.",
     tech_stack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
@@ -39,6 +43,7 @@ export const ProjectList = [
   {
     img: "/primotech.png",
     title: "PrimoTech",
+    category: "Security Solutions & CCTV",
     description:
       "Enterprise CCTV & security surveillance distributor platform for Uniarch IP cameras, NVRs, and smart kits.",
     tech_stack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
@@ -48,6 +53,7 @@ export const ProjectList = [
   {
     img: "/imou.png",
     title: "Imou",
+    category: "Smart Home & IoT Automation",
     description:
       "Intelligent smart security platform featuring AI-powered surveillance cameras, smart doorbells, and IoT automation.",
     tech_stack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
@@ -57,6 +63,7 @@ export const ProjectList = [
   {
     img: "/genova.png",
     title: "Genova-AI",
+    category: "AI & Creative Platform",
     description:
       "AI-powered creative visual platform for lightning-fast image generation and interactive design.",
     tech_stack: ["Next.js", "Python", "Tailwind CSS", "FastApi", "JavaScript", "Pollinations.ai", "MongoDB"],
@@ -66,6 +73,7 @@ export const ProjectList = [
   {
     img: "/bond1.png",
     title: "Bond-Metal",
+    category: "Architectural Manufacturing",
     description:
       "Modern architectural metal fabrication and manufacturing web experience built with React & Tailwind.",
     tech_stack: ["React+Vite", "Tailwind CSS", "HTML5", "JavaScript", "CSS3", "Figma"],
@@ -75,6 +83,7 @@ export const ProjectList = [
   {
     img: "/gene1.png",
     title: "To-Do App",
+    category: "Productivity & Workflow",
     description:
       "Intuitive task management application designed to organize, prioritize, and track daily workflow.",
     tech_stack: ["React+Vite", "Tailwind CSS", "HTML5", "CSS3", "Figma"],
@@ -84,6 +93,7 @@ export const ProjectList = [
   {
     img: "/weather.png",
     title: "WEATHER App",
+    category: "Live Weather Forecasting",
     description:
       "Real-time interactive weather forecasting web app with live meteorological data and clean UI.",
     tech_stack: ["HTML5", "CSS3", "JavaScript", "Weather API", "Netlify", "Figma"],
@@ -93,6 +103,7 @@ export const ProjectList = [
   {
     img: "/bolb.png",
     title: "BLOB-GENERATOR",
+    category: "Creative SVG Design Tool",
     description:
       "Dynamic CSS & SVG organic shape generator for modern UI/UX design experimentation.",
     tech_stack: ["React+Vite", "Tailwind CSS", "JavaScript", "SVG Export", "Netlify"],
@@ -102,6 +113,7 @@ export const ProjectList = [
   {
     img: "/ecom.png",
     title: "E-COMMERCE",
+    category: "Online Retail Platform",
     description:
       "Full-featured online shopping experience with product search, filtering, and responsive cart.",
     tech_stack: ["ReactJS", "Vite", "Tailwind CSS", "Store API", "TypeScript", "Netlify"],
@@ -111,6 +123,7 @@ export const ProjectList = [
   {
     img: "/gene.png",
     title: "BLOG-GENERATOR",
+    category: "Content Publishing CMS",
     description:
       "Modern blogging and content platform with Markdown support, Redux state, and dynamic routing.",
     tech_stack: ["Vite", "TypeScript", "Tailwind CSS", "Redux", "React Hook Form"],
